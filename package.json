@@ -5,25 +5,28 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",
-    "test": "mocha --compilers js:babel-core/register  --require ./test/test_helper.js  --recursive",
-    "test:watch": "npm run test -- --watch"
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
+    "test:watch": "npm run test -- --watch --watch-extensions jsx"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "6.5.1",
-    "babel-cli": "6.5.1",
-    "babel-preset-es2015": "6.5.0",
-    "chai": "3.5.0",
-    "chai-immutable": "1.5.3",
-    "mocha": "2.4.5"
-  },
-  "dependencies": {
-    "immutable": "3.7.6",
-    "redux": "3.3.1",
-    "socket.io": "1.4.5"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "chai-immutable": "^1.6.0",
+    "mocha": "^4.0.1"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "env"
+    ]
+  },
+  "dependencies": {
+    "immutable": "^3.8.2",
+    "redux": "^3.7.2",
+    "socket.io": "^2.0.4"
   }
 }
